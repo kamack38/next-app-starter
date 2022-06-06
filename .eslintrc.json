@@ -24,5 +24,6 @@
     "linebreak-style": ["error", "unix"],
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off"
-  }
+  },
+  "ignorePatterns": ["coverage-ts/**"]
 }

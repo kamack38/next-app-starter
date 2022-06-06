@@ -5,9 +5,6 @@
     {
       "matchPackagePatterns": ["eslint"],
       "labels": ["linting"]
-    },
-    {
-      "lockFileMaintenance": { "enabled": true }
     }
   ]
 }

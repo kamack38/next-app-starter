@@ -1,4 +1,13 @@
 {
-  "extends": ["config:base"],
-  "preserveSemverRanges": true
+  "extends": ["config:base", ":preserveSemverRanges"],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["eslint"],
+      "labels": ["linting"]
+    },
+    {
+      "lockFileMaintenance": { "enabled": true }
+    }
+  ]
 }

@@ -31,5 +31,4 @@ jobs:
 
       - name: 📊 Generate typescript code coverage
         run: |
-          yarn ts-coverage | sed -e '1,2d' | head -n -2 > report.txt
-          yarn ts-coverage
+          yarn ts-coverage >> $GITHUB_STEP_SUMMARY

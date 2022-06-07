@@ -32,6 +32,6 @@ jobs:
           yarn ts-coverage | sed -e 's/─/-/g; s/[│┌┬┐└┴┘]/|/g; 1,3d' | head -n-3 >> $GITHUB_STEP_SUMMARY
 
       - name: 🚧 Run if is PR
-        if: ${{ github.event_name == ' pull_request' }}
+        if: ${{ github.event_name == 'pull_request' }}
         run: |
           echo "This is PR"

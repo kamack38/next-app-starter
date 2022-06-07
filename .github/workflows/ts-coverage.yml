@@ -28,6 +28,7 @@ jobs:
 
       - name: 📊 Generate typescript code coverage
         run: |
+          echo '### Typescript type coverage' >> $GITHUB_STEP_SUMMARY
           yarn ts-coverage | sed -e 's/─/-/g; s/[│┌┬┐└┴┘]/|/g; 1,3d' >> $GITHUB_STEP_SUMMARY
 
       - name: 🚧 Run if is PR

@@ -10,7 +10,7 @@ on:
 
 jobs:
   analyze:
-    name: 📊 Analyze typescript code coverage
+    name: '🎡 CI'
     runs-on: ubuntu-latest
 
     steps:

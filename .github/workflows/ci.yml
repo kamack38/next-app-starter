@@ -1,4 +1,4 @@
-name: 'CodeQL'
+name: '🎡 CI'
 
 on:
   push:
@@ -26,10 +26,18 @@ jobs:
       - name: 📦 Install dependencies
         run: yarn
 
+      - name: 💄 Run lint
+        run: yarn lint
+
       - name: 📊 Generate typescript code coverage
-        run: |
-          echo '## :rocket: Typescript type coverage' >> $GITHUB_STEP_SUMMARY
-          yarn ts-coverage | sed -e 's/─/-/g; s/[│┌┬┐└┴┘]/|/g; 1,3d' | head -n-3 >> $GITHUB_STEP_SUMMARY
+        id: ts-cov
+        uses: kamack38/type-coverage@main
+        with:
+          ignoreFiles: |
+            .next/**
+
+      - name: 📝 Set action summary
+        run: echo "${{ steps.ts-cov.outputs.markdown }}" >> $GITHUB_STEP_SUMMARY
 
       - name: 🚧 Run if is PR
         if: ${{ github.event_name == 'pull_request' }}

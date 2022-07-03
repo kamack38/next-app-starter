@@ -9,7 +9,7 @@ on:
     - cron: '22 2 * * 4'
 
 jobs:
-  analyze:
+  ci:
     name: '🎡 CI'
     runs-on: ubuntu-latest
 

@@ -33,8 +33,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-
-# TS-coverage
-coverage-ts
-report.txt
-report.md
+next-env.d.ts

@@ -24,6 +24,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - pre-commit linting (prevents bad code to be committed)
 - CI
 - typescript coverage checking on commits (github action)
+- tailwindcss
 
 ## Scripts
 
